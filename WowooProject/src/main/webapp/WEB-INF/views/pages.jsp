@@ -43,9 +43,16 @@
 <meta name="author" content="">
 
 <title>Wowoo - ${title}</title>
+<script>
+<!-- this one coming from pageController : title -->
+	window.menu = '${title}';
+</script>
 
 <!-- Bootstrap core CSS -->
 <link href="${css}/bootstrap.min.css" rel="stylesheet">
+
+<!-- Bootstrap journal theme -->
+<link href="${css}/bootstrap-journal-theme.css" rel="stylesheet">
 
 <!-- Custom styles for this template -->
 <link href="${css}/myapp.css" rel="stylesheet">
@@ -54,50 +61,59 @@
 
 <body>
 
-	<!-- Navigation -->
-	<%@include file="./shared/navbar.jsp"%>
+	<div class="wrapper">
+
+		<!-- Navigation -->
+		<%@include file="./shared/navbar.jsp"%>
 
 
-	<!-- Page Content -->
-	<!--  loading the home content -->
-	<c:if test="${userClickHome == true}">
-		<%@include file="home.jsp"%>
-	</c:if>
+		<!-- Page Content -->
 
-	<!-- load when user click project list -->
-	<c:if test="${userClickProjectList == true}">
- 		<%@include file="projectList.jsp"%>
-	</c:if>
-	
-	<!-- load when user click wallet -->
-	<c:if test="${userClickWallet == true}">
- 		<%@include file="wallet.jsp"%>
-	</c:if>
-	
-	<!-- load when user click kyc -->
-	<c:if test="${userClickKYC == true}">
- 		<%@include file="kyc.jsp"%>
-	</c:if>
-	
-	<!-- load when user click evangelist -->
-	<c:if test="${userClickEvangelist == true}">
- 		<%@include file="evangelist.jsp"%>
-	</c:if>
-	
-	<!-- load when user click bounty-->
-	<c:if test="${userClickBounty == true}">
- 		<%@include file="bounty.jsp"%>
-	</c:if>
-	
-	
+		<div class="content">
 
-	<!-- Footer -->
-	<%@include file="./shared/footer.jsp"%>
+			<!--  loading the home content -->
+			<c:if test="${userClickHome == true}">
+				<%@include file="home.jsp"%>
+			</c:if>
 
-	<!-- Bootstrap core JavaScript -->
-	<script src="${js}/jquery.min.js"></script>
-	<script src="${js}/bootstrap.bundle.min.js"></script>
+			<!-- load when user click project list -->
+			<c:if test="${userClickProjectList == true}">
+				<%@include file="projectList.jsp"%>
+			</c:if>
 
+			<!-- load when user click wallet -->
+			<c:if test="${userClickWallet == true}">
+				<%@include file="wallet.jsp"%>
+			</c:if>
+
+			<!-- load when user click kyc -->
+			<c:if test="${userClickKYC == true}">
+				<%@include file="kyc.jsp"%>
+			</c:if>
+
+			<!-- load when user click evangelist -->
+			<c:if test="${userClickEvangelist == true}">
+				<%@include file="evangelist.jsp"%>
+			</c:if>
+
+			<!-- load when user click bounty-->
+			<c:if test="${userClickBounty == true}">
+				<%@include file="bounty.jsp"%>
+			</c:if>
+
+		</div>
+
+		<!-- Footer -->
+		<%@include file="./shared/footer.jsp"%>
+
+		<!-- Bootstrap core JavaScript -->
+		<script src="${js}/jquery.min.js"></script>
+		<script src="${js}/bootstrap.bundle.min.js"></script>
+
+		<!-- self-coded javascript -->
+		<script src="${js}/myapp.js"></script>
+
+	</div>
 </body>
 
 </html>

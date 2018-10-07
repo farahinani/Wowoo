@@ -1,6 +1,8 @@
+
+<div class="jumbotron">
  <div class="container">
 
-      <h1 class="my-4">Welcome to Modern Business</h1>
+      <h1 class="my-4">Welcome to Wowoo!</h1>
 
 <!-- Header -->
 
@@ -192,5 +194,6 @@
         </div>
       </div>
 
+    </div>
     </div>
     <!-- /.container -->
