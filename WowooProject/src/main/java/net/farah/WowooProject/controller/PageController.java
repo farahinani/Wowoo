@@ -7,12 +7,60 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class PageController {
 
+	//home
 	@RequestMapping(value = {"/","/home","/index"})
 	public ModelAndView index() {
 		ModelAndView mv = new ModelAndView("pages"); //viewResolver will give this name (this is logical name not physical name)
-		mv.addObject("greeting","Welcome to Spring Web MVC princess Para");//greeting will pass to the view
+		//mv.addObject("greeting","Welcome to Spring Web MVC princess Para");//greeting will pass to the view
+		mv.addObject("title","Home");
+		mv.addObject("userClickHome",true);
 		return mv;
 	}
+	
+	//project list
+	@RequestMapping(value = {"/projectList"})
+	public ModelAndView projectList() {
+		ModelAndView mv = new ModelAndView("pages"); 
+		mv.addObject("title","Project List");
+		mv.addObject("userClickProjectList",true);
+		return mv;
+	}
+	
+	//wallet
+	@RequestMapping(value = {"/wallet"})
+	public ModelAndView wallet() {
+		ModelAndView mv = new ModelAndView("pages"); 
+		mv.addObject("title","Wallet");
+		mv.addObject("userClickWallet",true);
+		return mv;
+	}
+	
+	//kyc
+	@RequestMapping(value = {"/kyc"})
+	public ModelAndView kyc() {
+		ModelAndView mv = new ModelAndView("pages"); 
+		mv.addObject("title","KYC Info");
+		mv.addObject("userClickKYC",true);
+		return mv;
+	}
+	
+	//evangelist
+			@RequestMapping(value = {"/evangelist"})
+			public ModelAndView evangelist() {
+				ModelAndView mv = new ModelAndView("pages"); 
+				mv.addObject("title","Evangelist");
+				mv.addObject("userClickEvangelist",true);
+				return mv;
+			}
+	
+	//bounty
+		@RequestMapping(value = {"/bounty"})
+		public ModelAndView bounty() {
+			ModelAndView mv = new ModelAndView("pages"); 
+			mv.addObject("title","Bounty");
+			mv.addObject("userClickBounty",true);
+			return mv;
+		}
 	
 //	@RequestMapping(value="/test")
 	//public ModelAndView test(@RequestParam(value="greeting")String greeting)
