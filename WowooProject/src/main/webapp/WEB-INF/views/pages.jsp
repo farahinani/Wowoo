@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta http-equiv="Context-Type" content="text/html charset-ISO-8859-1">
-<title>Wowoo_Project</title>
+<title>Wowoo Project</title>
 </head>
 <body>
 
