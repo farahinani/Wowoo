@@ -10,7 +10,7 @@ public class PageController {
 	//home
 	@RequestMapping(value = {"/","/home","/index"})
 	public ModelAndView index() {
-		ModelAndView mv = new ModelAndView("pages"); //viewResolver will give this name (this is logical name not physical name)
+		ModelAndView mv = new ModelAndView("page2"); //viewResolver will give this name (this is logical name not physical name)
 		//mv.addObject("greeting","Welcome to Spring Web MVC princess Para");//greeting will pass to the view
 		mv.addObject("title","Home");
 		mv.addObject("userClickHome",true);
@@ -20,7 +20,7 @@ public class PageController {
 	//project list
 	@RequestMapping(value = {"/projectList"})
 	public ModelAndView projectList() {
-		ModelAndView mv = new ModelAndView("pages"); 
+		ModelAndView mv = new ModelAndView("page2"); 
 		mv.addObject("title","Project List");
 		mv.addObject("userClickProjectList",true);
 		return mv;
@@ -38,7 +38,7 @@ public class PageController {
 	//kyc
 	@RequestMapping(value = {"/kyc"})
 	public ModelAndView kyc() {
-		ModelAndView mv = new ModelAndView("pages"); 
+		ModelAndView mv = new ModelAndView("page2"); 
 		mv.addObject("title","KYC Info");
 		mv.addObject("userClickKYC",true);
 		return mv;
@@ -47,7 +47,7 @@ public class PageController {
 	//evangelist
 			@RequestMapping(value = {"/evangelist"})
 			public ModelAndView evangelist() {
-				ModelAndView mv = new ModelAndView("pages"); 
+				ModelAndView mv = new ModelAndView("page2"); 
 				mv.addObject("title","Evangelist");
 				mv.addObject("userClickEvangelist",true);
 				return mv;
@@ -56,7 +56,7 @@ public class PageController {
 	//bounty
 		@RequestMapping(value = {"/bounty"})
 		public ModelAndView bounty() {
-			ModelAndView mv = new ModelAndView("pages"); 
+			ModelAndView mv = new ModelAndView("page2"); 
 			mv.addObject("title","Bounty");
 			mv.addObject("userClickBounty",true);
 			return mv;
