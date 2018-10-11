@@ -4,1356 +4,1502 @@
 <%@taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 
 <spring:url var="css" value="/resources/css" />
-<spring:url var="js" value="/resources/js" />
+<spring:url var="js" value="/resources/js/" />
 <spring:url var="images" value="/resources/images" />
 
 <c:set var="contextRoot" value="${pageContext.request.contextPath}" />
 
 
 
+
 <!DOCTYPE html>
 <html lang="en">
 
-	<!-- Google Web Fonts
-	================================================== -->
+<head>
+    <!-- Required meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="au theme template">
+    <meta name="author" content="Hau Nguyen">
+    <meta name="keywords" content="au theme template">
 
-	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700%7CSource+Sans+Pro:300,400,500,600,700,900" rel="stylesheet">
+    <!-- Title Page-->
+    <title>Wowoo</title>
 
-	<!-- Basic Page Needs
-	================================================== -->
+    <!-- Fontfaces CSS-->
+    <link href="${css}/font-face.css" rel="stylesheet" media="all">
+    <link href="${css}/fontawesome-all.min.css" rel="stylesheet" media="all">
+    <link href="${css}/font-awesome.min.css" rel="stylesheet" media="all">
+    <link href="${css}/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+    
 
-	<title>Сryptex</title>
-  
-  <!--meta info-->
-	<meta charset="utf-8">
-	<meta name="author" content="">
-	<meta name="keywords" content="">
-	<meta name="description" content="">
 
-	<!-- Mobile Specific Metas
-	================================================== -->
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!-- Bootstrap CSS-->
+    <link href="${css}/bootstrap.min.css" rel="stylesheet" media="all">
 
-	<!-- Vendor CSS
-	============================================ -->
-	
-	<link rel="stylesheet" href="${css}/demo.css">
-  <link rel="stylesheet" href="${css}/liMarquee.css">
-  <link rel="stylesheet" href="${css}/chartist.css">
-  <link rel="stylesheet" href="${css}/appstorebadges.css">
+    <!-- Vendor CSS-->
+    <link href="${css}/animsition.min.css" rel="stylesheet" media="all">
+    <link href="${css}/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet" media="all">
+    <link href="${css}/animate.css" rel="stylesheet" media="all">
+    <link href="${css}/hamburgers.min.css" rel="stylesheet" media="all">
+    <link href="${css}/slick.css" rel="stylesheet" media="all">
+    <link href="${css}/select2.min.css" rel="stylesheet" media="all">
+    <link href="${css}/perfect-scrollbar.css" rel="stylesheet" media="all">
 
-	<!-- CSS theme files
-	============================================ -->
-	<link rel="stylesheet" href="${css}/bootstrap-grid2.css">
-	<link rel="stylesheet" href="${css}/fontello.css">
-	<link rel="stylesheet" href="${css}/owl.css">
-	<link rel="stylesheet" href="${css}/style.css">
-	<link rel="stylesheet" href="${css}/responsive.css">
+    <!-- Main CSS-->
+    <link href="${css}/theme.css" rel="stylesheet" media="all">
 
 </head>
 
-<body>
-
-  <div class="loader"></div>
-
-  <!--cookie-->
-  <!-- <div class="cookie">
-          <div class="container">
-            <div class="clearfix">
-              <span>Please note this website requires cookies in order to function correctly, they do not store any specific information about you personally.</span>
-              <div class="f-right"><a href="#" class="button button-type-3 button-orange">Accept Cookies</a><a href="#" class="button button-type-3 button-grey-light">Read More</a></div>
-            </div>
-          </div>
-        </div>-->
-
-  <!-- - - - - - - - - - - - - - Wrapper - - - - - - - - - - - - - - - - -->
-
-  <div id="wrapper" class="wrapper-container">
-
-    <!-- - - - - - - - - - - - - Mobile Menu - - - - - - - - - - - - - - -->
-
-    <nav id="mobile-advanced" class="mobile-advanced"></nav>
-
-    <!-- - - - - - - - - - - - - - Header - - - - - - - - - - - - - - - - -->
-    
-    <img src="assets/images/Cryptocurrency-Market-Crash.jpg" alt="test">
-    
-
-    <header id="header" class="header style-2 sticky-header fixed-header">
-      
-      <!-- searchform -->
-
-      <div class="searchform-wrap">
-        <div class="vc-child h-inherit">
-
-          <form class="search-form">
-            <button type="submit" class="search-button"></button>
-            <div class="wrapper">
-              <input type="text" name="search" placeholder="Start typing...">
-            </div>
-          </form>
-
-          <button class="close-search-form"></button>
-
-        </div>
-      </div>
-      
-      <!-- top-header -->
-
-      <div class="top-header">
-
-        <div class="container">
-
-          <div class="row justify-content-between align-items-center">
-
-            <div class="col">
-              
-              <!-- logo -->
-
-              <div class="logo-wrap">
-
-                <a href="index.html" class="logo"><img src="images/logo2.png" alt=""></a>
-
-              </div>
-
-            </div>
-            
-            <div class="col-xl-6 col-lg-8 col">
-              
-              <!-- - - - - - - - - - - - / Mobile Menu - - - - - - - - - - - - - -->
-
-              <!--main menu-->
-
-              <div class="menu-holder">
-                
-                <div class="container">
-                  
-                  <div class="menu-wrap">
-
-                    <div class="nav-item">
-                      
-                      <!-- - - - - - - - - - - - - - Navigation - - - - - - - - - - - - - - - - -->
-
-                      <%@include file="./shared/navbar.jsp"%>
-
-                      <!-- - - - - - - - - - - - - end Navigation - - - - - - - - - - - - - - - -->
-
+<body class="animsition">
+    <div class="page-wrapper">
+        <!-- HEADER MOBILE-->
+        <header class="header-mobile d-block d-lg-none">
+            <div class="header-mobile__bar">
+                <div class="container-fluid">
+                    <div class="header-mobile-inner">
+                        <a class="logo" href="index.html">
+                            <img src="${images}/logo.png" alt="Wowoo" />
+                        </a>
+                        <button class="hamburger hamburger--slider" type="button">
+                            <span class="hamburger-box">
+                                <span class="hamburger-inner"></span>
+                            </span>
+                        </button>
                     </div>
-
-                  </div>
-
                 </div>
-
-              </div>
-
             </div>
-
-            <div class="col align-right">
-
-              <div class="head-action">
-                
-                <div class="search-holder">
-                        
-                  <button type="button" class="search-button"></button>
-        
+            <nav class="navbar-mobile">
+                <div class="container-fluid">
+                    <ul class="navbar-mobile__list list-unstyled">
+                        <li class="has-sub">
+                            <a class="js-arrow" href="#">
+                                <i class="fas fa-tachometer-alt"></i>Dashboard</a>
+                            <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
+                                <li>
+                                    <a href="index.html">Dashboard 1</a>
+                                </li>
+                                <li>
+                                    <a href="index2.html">Dashboard 2</a>
+                                </li>
+                                <li>
+                                    <a href="index3.html">Dashboard 3</a>
+                                </li>
+                                <li>
+                                    <a href="index4.html">Dashboard 4</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="chart.html">
+                                <i class="fas fa-chart-bar"></i>Charts</a>
+                        </li>
+                        <li>
+                            <a href="table.html">
+                                <i class="fas fa-table"></i>Tables</a>
+                        </li>
+                        <li>
+                            <a href="form.html">
+                                <i class="far fa-check-square"></i>Forms</a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fas fa-calendar-alt"></i>Calendar</a>
+                        </li>
+                        <li>
+                            <a href="map.html">
+                                <i class="fas fa-map-marker-alt"></i>Maps</a>
+                        </li>
+                        <li class="has-sub">
+                            <a class="js-arrow" href="#">
+                                <i class="fas fa-copy"></i>Pages</a>
+                            <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
+                                <li>
+                                    <a href="login.html">Login</a>
+                                </li>
+                                <li>
+                                    <a href="register.html">Register</a>
+                                </li>
+                                <li>
+                                    <a href="forget-pass.html">Forget Password</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="has-sub">
+                            <a class="js-arrow" href="#">
+                                <i class="fas fa-desktop"></i>UI Elements</a>
+                            <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
+                                <li>
+                                    <a href="button.html">Button</a>
+                                </li>
+                                <li>
+                                    <a href="badge.html">Badges</a>
+                                </li>
+                                <li>
+                                    <a href="tab.html">Tabs</a>
+                                </li>
+                                <li>
+                                    <a href="card.html">Cards</a>
+                                </li>
+                                <li>
+                                    <a href="alert.html">Alerts</a>
+                                </li>
+                                <li>
+                                    <a href="progress-bar.html">Progress Bars</a>
+                                </li>
+                                <li>
+                                    <a href="modal.html">Modals</a>
+                                </li>
+                                <li>
+                                    <a href="switch.html">Switchs</a>
+                                </li>
+                                <li>
+                                    <a href="grid.html">Grids</a>
+                                </li>
+                                <li>
+                                    <a href="fontawesome.html">Fontawesome Icon</a>
+                                </li>
+                                <li>
+                                    <a href="typo.html">Typography</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
                 </div>
-                
-                <a href="#" class="btn btn-style-3 btn-big">Get a Quote</a>
+            </nav>
+        </header>
+        <!-- END HEADER MOBILE-->
 
-                <div class="lang-button">
-
-                  <a href="#"><img src="images/lang_icon.png" alt=""></a>
-                  <ul class="dropdown-list">
-                    <li><a href="#">English</a></li>
-                    <li><a href="#">German</a></li>
-                    <li><a href="#">Spanish</a></li>
-                  </ul>
-
-                </div>
-
-              </div>
-
+        <!-- MENU SIDEBAR-->
+        <aside class="menu-sidebar d-none d-lg-block">
+            <div class="logo">
+                <a href="#">
+                    <img src="images/icon/logo.png" alt="Cool Admin" />
+                </a>
             </div>
+            <div class="menu-sidebar__content js-scrollbar1">
+                <nav class="navbar-sidebar">
+                    <ul class="list-unstyled navbar__list">
+                        <li class="has-sub">
+                            <a class="js-arrow" href="#">
+                                <i class="fas fa-tachometer-alt"></i>Dashboard</a>
+                            <ul class="list-unstyled navbar__sub-list js-sub-list">
+                                <li>
+                                    <a href="index.html">Dashboard 1</a>
+                                </li>
+                                <li>
+                                    <a href="index2.html">Dashboard 2</a>
+                                </li>
+                                <li>
+                                    <a href="index3.html">Dashboard 3</a>
+                                </li>
+                                <li>
+                                    <a href="index4.html">Dashboard 4</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="chart.html">
+                                <i class="fas fa-chart-bar"></i>Charts</a>
+                        </li>
+                        <li>
+                            <a href="table.html">
+                                <i class="fas fa-table"></i>Tables</a>
+                        </li>
+                        <li class="active">
+                            <a href="form.html">
+                                <i class="far fa-check-square"></i>Forms</a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fas fa-calendar-alt"></i>Calendar</a>
+                        </li>
+                        <li>
+                            <a href="map.html">
+                                <i class="fas fa-map-marker-alt"></i>Maps</a>
+                        </li>
+                        <li class="has-sub">
+                            <a class="js-arrow" href="#">
+                                <i class="fas fa-copy"></i>Pages</a>
+                            <ul class="list-unstyled navbar__sub-list js-sub-list">
+                                <li>
+                                    <a href="login.html">Login</a>
+                                </li>
+                                <li>
+                                    <a href="register.html">Register</a>
+                                </li>
+                                <li>
+                                    <a href="forget-pass.html">Forget Password</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="has-sub">
+                            <a class="js-arrow" href="#">
+                                <i class="fas fa-desktop"></i>UI Elements</a>
+                            <ul class="list-unstyled navbar__sub-list js-sub-list">
+                                <li>
+                                    <a href="button.html">Button</a>
+                                </li>
+                                <li>
+                                    <a href="badge.html">Badges</a>
+                                </li>
+                                <li>
+                                    <a href="tab.html">Tabs</a>
+                                </li>
+                                <li>
+                                    <a href="card.html">Cards</a>
+                                </li>
+                                <li>
+                                    <a href="alert.html">Alerts</a>
+                                </li>
+                                <li>
+                                    <a href="progress-bar.html">Progress Bars</a>
+                                </li>
+                                <li>
+                                    <a href="modal.html">Modals</a>
+                                </li>
+                                <li>
+                                    <a href="switch.html">Switchs</a>
+                                </li>
+                                <li>
+                                    <a href="grid.html">Grids</a>
+                                </li>
+                                <li>
+                                    <a href="fontawesome.html">Fontawesome Icon</a>
+                                </li>
+                                <li>
+                                    <a href="typo.html">Typography</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </aside>
+        <!-- END MENU SIDEBAR-->
 
-          </div>
+        <!-- PAGE CONTAINER-->
+        <div class="page-container">
+            <!-- HEADER DESKTOP-->
+            <header class="header-desktop">
+                <div class="section__content section__content--p30">
+                    <div class="container-fluid">
+                        <div class="header-wrap">
+                            <form class="form-header" action="" method="POST">
+                                <input class="au-input au-input--xl" type="text" name="search" placeholder="Search for datas &amp; reports..." />
+                                <button class="au-btn--submit" type="submit">
+                                    <i class="zmdi zmdi-search"></i>
+                                </button>
+                            </form>
+                            <div class="header-button">
+                                <div class="noti-wrap">
+                                    <div class="noti__item js-item-menu">
+                                        <i class="zmdi zmdi-comment-more"></i>
+                                        <span class="quantity">1</span>
+                                        <div class="mess-dropdown js-dropdown">
+                                            <div class="mess__title">
+                                                <p>You have 2 news message</p>
+                                            </div>
+                                            <div class="mess__item">
+                                                <div class="image img-cir img-40">
+                                                    <img src="images/icon/avatar-06.jpg" alt="Michelle Moreno" />
+                                                </div>
+                                                <div class="content">
+                                                    <h6>Michelle Moreno</h6>
+                                                    <p>Have sent a photo</p>
+                                                    <span class="time">3 min ago</span>
+                                                </div>
+                                            </div>
+                                            <div class="mess__item">
+                                                <div class="image img-cir img-40">
+                                                    <img src="images/icon/avatar-04.jpg" alt="Diane Myers" />
+                                                </div>
+                                                <div class="content">
+                                                    <h6>Diane Myers</h6>
+                                                    <p>You are now connected on message</p>
+                                                    <span class="time">Yesterday</span>
+                                                </div>
+                                            </div>
+                                            <div class="mess__footer">
+                                                <a href="#">View all messages</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="noti__item js-item-menu">
+                                        <i class="zmdi zmdi-email"></i>
+                                        <span class="quantity">1</span>
+                                        <div class="email-dropdown js-dropdown">
+                                            <div class="email__title">
+                                                <p>You have 3 New Emails</p>
+                                            </div>
+                                            <div class="email__item">
+                                                <div class="image img-cir img-40">
+                                                    <img src="images/icon/avatar-06.jpg" alt="Cynthia Harvey" />
+                                                </div>
+                                                <div class="content">
+                                                    <p>Meeting about new dashboard...</p>
+                                                    <span>Cynthia Harvey, 3 min ago</span>
+                                                </div>
+                                            </div>
+                                            <div class="email__item">
+                                                <div class="image img-cir img-40">
+                                                    <img src="images/icon/avatar-05.jpg" alt="Cynthia Harvey" />
+                                                </div>
+                                                <div class="content">
+                                                    <p>Meeting about new dashboard...</p>
+                                                    <span>Cynthia Harvey, Yesterday</span>
+                                                </div>
+                                            </div>
+                                            <div class="email__item">
+                                                <div class="image img-cir img-40">
+                                                    <img src="images/icon/avatar-04.jpg" alt="Cynthia Harvey" />
+                                                </div>
+                                                <div class="content">
+                                                    <p>Meeting about new dashboard...</p>
+                                                    <span>Cynthia Harvey, April 12,,2018</span>
+                                                </div>
+                                            </div>
+                                            <div class="email__footer">
+                                                <a href="#">See all emails</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="noti__item js-item-menu">
+                                        <i class="zmdi zmdi-notifications"></i>
+                                        <span class="quantity">3</span>
+                                        <div class="notifi-dropdown js-dropdown">
+                                            <div class="notifi__title">
+                                                <p>You have 3 Notifications</p>
+                                            </div>
+                                            <div class="notifi__item">
+                                                <div class="bg-c1 img-cir img-40">
+                                                    <i class="zmdi zmdi-email-open"></i>
+                                                </div>
+                                                <div class="content">
+                                                    <p>You got a email notification</p>
+                                                    <span class="date">April 12, 2018 06:50</span>
+                                                </div>
+                                            </div>
+                                            <div class="notifi__item">
+                                                <div class="bg-c2 img-cir img-40">
+                                                    <i class="zmdi zmdi-account-box"></i>
+                                                </div>
+                                                <div class="content">
+                                                    <p>Your account has been blocked</p>
+                                                    <span class="date">April 12, 2018 06:50</span>
+                                                </div>
+                                            </div>
+                                            <div class="notifi__item">
+                                                <div class="bg-c3 img-cir img-40">
+                                                    <i class="zmdi zmdi-file-text"></i>
+                                                </div>
+                                                <div class="content">
+                                                    <p>You got a new file</p>
+                                                    <span class="date">April 12, 2018 06:50</span>
+                                                </div>
+                                            </div>
+                                            <div class="notifi__footer">
+                                                <a href="#">All notifications</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="account-wrap">
+                                    <div class="account-item clearfix js-item-menu">
+                                        <div class="image">
+                                            <img src="images/icon/avatar-01.jpg" alt="John Doe" />
+                                        </div>
+                                        <div class="content">
+                                            <a class="js-acc-btn" href="#">john doe</a>
+                                        </div>
+                                        <div class="account-dropdown js-dropdown">
+                                            <div class="info clearfix">
+                                                <div class="image">
+                                                    <a href="#">
+                                                        <img src="images/icon/avatar-01.jpg" alt="John Doe" />
+                                                    </a>
+                                                </div>
+                                                <div class="content">
+                                                    <h5 class="name">
+                                                        <a href="#">john doe</a>
+                                                    </h5>
+                                                    <span class="email"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="fe949196909a919bbe9b869f938e929bd09d9193">[email&#160;protected]</a></span>
+                                                </div>
+                                            </div>
+                                            <div class="account-dropdown__body">
+                                                <div class="account-dropdown__item">
+                                                    <a href="#">
+                                                        <i class="zmdi zmdi-account"></i>Account</a>
+                                                </div>
+                                                <div class="account-dropdown__item">
+                                                    <a href="#">
+                                                        <i class="zmdi zmdi-settings"></i>Setting</a>
+                                                </div>
+                                                <div class="account-dropdown__item">
+                                                    <a href="#">
+                                                        <i class="zmdi zmdi-money-box"></i>Billing</a>
+                                                </div>
+                                            </div>
+                                            <div class="account-dropdown__footer">
+                                                <a href="#">
+                                                    <i class="zmdi zmdi-power"></i>Logout</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <!-- HEADER DESKTOP-->
 
+            <!-- MAIN CONTENT-->
+            <div class="main-content">
+                <div class="section__content section__content--p30">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="card">
+                                    <div class="card-header">Credit Card</div>
+                                    <div class="card-body">
+                                        <div class="card-title">
+                                            <h3 class="text-center title-2">Pay Invoice</h3>
+                                        </div>
+                                        <hr>
+                                        <form action="" method="post" novalidate="novalidate">
+                                            <div class="form-group">
+                                                <label for="cc-payment" class="control-label mb-1">Payment amount</label>
+                                                <input id="cc-pament" name="cc-payment" type="text" class="form-control" aria-required="true" aria-invalid="false" value="100.00">
+                                            </div>
+                                            <div class="form-group has-success">
+                                                <label for="cc-name" class="control-label mb-1">Name on card</label>
+                                                <input id="cc-name" name="cc-name" type="text" class="form-control cc-name valid" data-val="true" data-val-required="Please enter the name on card"
+                                                    autocomplete="cc-name" aria-required="true" aria-invalid="false" aria-describedby="cc-name-error">
+                                                <span class="help-block field-validation-valid" data-valmsg-for="cc-name" data-valmsg-replace="true"></span>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="cc-number" class="control-label mb-1">Card number</label>
+                                                <input id="cc-number" name="cc-number" type="tel" class="form-control cc-number identified visa" value="" data-val="true"
+                                                    data-val-required="Please enter the card number" data-val-cc-number="Please enter a valid card number"
+                                                    autocomplete="cc-number">
+                                                <span class="help-block" data-valmsg-for="cc-number" data-valmsg-replace="true"></span>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-6">
+                                                    <div class="form-group">
+                                                        <label for="cc-exp" class="control-label mb-1">Expiration</label>
+                                                        <input id="cc-exp" name="cc-exp" type="tel" class="form-control cc-exp" value="" data-val="true" data-val-required="Please enter the card expiration"
+                                                            data-val-cc-exp="Please enter a valid month and year" placeholder="MM / YY"
+                                                            autocomplete="cc-exp">
+                                                        <span class="help-block" data-valmsg-for="cc-exp" data-valmsg-replace="true"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-6">
+                                                    <label for="x_card_code" class="control-label mb-1">Security code</label>
+                                                    <div class="input-group">
+                                                        <input id="x_card_code" name="x_card_code" type="tel" class="form-control cc-cvc" value="" data-val="true" data-val-required="Please enter the security code"
+                                                            data-val-cc-cvc="Please enter a valid security code" autocomplete="off">
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <button id="payment-button" type="submit" class="btn btn-lg btn-info btn-block">
+                                                    <i class="fa fa-lock fa-lg"></i>&nbsp;
+                                                    <span id="payment-button-amount">Pay $100.00</span>
+                                                    <span id="payment-button-sending" style="display:none;">Sending…</span>
+                                                </button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <strong>Company</strong>
+                                        <small> Form</small>
+                                    </div>
+                                    <div class="card-body card-block">
+                                        <div class="form-group">
+                                            <label for="company" class=" form-control-label">Company</label>
+                                            <input type="text" id="company" placeholder="Enter your company name" class="form-control">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="vat" class=" form-control-label">VAT</label>
+                                            <input type="text" id="vat" placeholder="DE1234567890" class="form-control">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="street" class=" form-control-label">Street</label>
+                                            <input type="text" id="street" placeholder="Enter street name" class="form-control">
+                                        </div>
+                                        <div class="row form-group">
+                                            <div class="col-8">
+                                                <div class="form-group">
+                                                    <label for="city" class=" form-control-label">City</label>
+                                                    <input type="text" id="city" placeholder="Enter your city" class="form-control">
+                                                </div>
+                                            </div>
+                                            <div class="col-8">
+                                                <div class="form-group">
+                                                    <label for="postal-code" class=" form-control-label">Postal Code</label>
+                                                    <input type="text" id="postal-code" placeholder="Postal Code" class="form-control">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="country" class=" form-control-label">Country</label>
+                                            <input type="text" id="country" placeholder="Country name" class="form-control">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <strong>Basic Form</strong> Elements
+                                    </div>
+                                    <div class="card-body card-block">
+                                        <form action="" method="post" enctype="multipart/form-data" class="form-horizontal">
+                                            <div class="row form-group">
+                                                <div class="col col-md-3">
+                                                    <label class=" form-control-label">Static</label>
+                                                </div>
+                                                <div class="col-12 col-md-9">
+                                                    <p class="form-control-static">Username</p>
+                                                </div>
+                                            </div>
+                                            <div class="row form-group">
+                                                <div class="col col-md-3">
+                                                    <label for="text-input" class=" form-control-label">Text Input</label>
+                                                </div>
+                                                <div class="col-12 col-md-9">
+                                                    <input type="text" id="text-input" name="text-input" placeholder="Text" class="form-control">
+                                                    <small class="form-text text-muted">This is a help text</small>
+                                                </div>
+                                            </div>
+                                            <div class="row form-group">
+                                                <div class="col col-md-3">
+                                                    <label for="email-input" class=" form-control-label">Email Input</label>
+                                                </div>
+                                                <div class="col-12 col-md-9">
+                                                    <input type="email" id="email-input" name="email-input" placeholder="Enter Email" class="form-control">
+                                                    <small class="help-block form-text">Please enter your email</small>
+                                                </div>
+                                            </div>
+                                            <div class="row form-group">
+                                                <div class="col col-md-3">
+                                                    <label for="password-input" class=" form-control-label">Password</label>
+                                                </div>
+                                                <div class="col-12 col-md-9">
+                                                    <input type="password" id="password-input" name="password-input" placeholder="Password" class="form-control">
+                                                    <small class="help-block form-text">Please enter a complex password</small>
+                                                </div>
+                                            </div>
+                                            <div class="row form-group">
+                                                <div class="col col-md-3">
+                                                    <label for="disabled-input" class=" form-control-label">Disabled Input</label>
+                                                </div>
+                                                <div class="col-12 col-md-9">
+                                                    <input type="text" id="disabled-input" name="disabled-input" placeholder="Disabled" class="form-control">
+                                                </div>
+                                            </div>
+                                            <div class="row form-group">
+                                                <div class="col col-md-3">
+                                                    <label for="textarea-input" class=" form-control-label">Textarea</label>
+                                                </div>
+                                                <div class="col-12 col-md-9">
+                                                    <textarea name="textarea-input" id="textarea-input" rows="9" placeholder="Content..." class="form-control"></textarea>
+                                                </div>
+                                            </div>
+                                            <div class="row form-group">
+                                                <div class="col col-md-3">
+                                                    <label for="select" class=" form-control-label">Select</label>
+                                                </div>
+                                                <div class="col-12 col-md-9">
+                                                    <select name="select" id="select" class="form-control">
+                                                        <option value="0">Please select</option>
+                                                        <option value="1">Option #1</option>
+                                                        <option value="2">Option #2</option>
+                                                        <option value="3">Option #3</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="row form-group">
+                                                <div class="col col-md-3">
+                                                    <label for="selectLg" class=" form-control-label">Select Large</label>
+                                                </div>
+                                                <div class="col-12 col-md-9">
+                                                    <select name="selectLg" id="selectLg" class="form-control-lg form-control">
+                                                        <option value="0">Please select</option>
+                                                        <option value="1">Option #1</option>
+                                                        <option value="2">Option #2</option>
+                                                        <option value="3">Option #3</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="row form-group">
+                                                <div class="col col-md-3">
+                                                    <label for="selectSm" class=" form-control-label">Select Small</label>
+                                                </div>
+                                                <div class="col-12 col-md-9">
+                                                    <select name="selectSm" id="SelectLm" class="form-control-sm form-control">
+                                                        <option value="0">Please select</option>
+                                                        <option value="1">Option #1</option>
+                                                        <option value="2">Option #2</option>
+                                                        <option value="3">Option #3</option>
+                                                        <option value="4">Option #4</option>
+                                                        <option value="5">Option #5</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="row form-group">
+                                                <div class="col col-md-3">
+                                                    <label for="disabledSelect" class=" form-control-label">Disabled Select</label>
+                                                </div>
+                                                <div class="col-12 col-md-9">
+                                                    <select name="disabledSelect" id="disabledSelect"  class="form-control">
+                                                        <option value="0">Please select</option>
+                                                        <option value="1">Option #1</option>
+                                                        <option value="2">Option #2</option>
+                                                        <option value="3">Option #3</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="row form-group">
+                                                <div class="col col-md-3">
+                                                    <label for="multiple-select" class=" form-control-label">Multiple select</label>
+                                                </div>
+                                                <div class="col col-md-9">
+                                                    <select name="multiple-select" id="multiple-select" class="form-control">
+                                                        <option value="1">Option #1</option>
+                                                        <option value="2">Option #2</option>
+                                                        <option value="3">Option #3</option>
+                                                        <option value="4">Option #4</option>
+                                                        <option value="5">Option #5</option>
+                                                        <option value="6">Option #6</option>
+                                                        <option value="7">Option #7</option>
+                                                        <option value="8">Option #8</option>
+                                                        <option value="9">Option #9</option>
+                                                        <option value="10">Option #10</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="row form-group">
+                                                <div class="col col-md-3">
+                                                    <label class=" form-control-label">Radios</label>
+                                                </div>
+                                                <div class="col col-md-9">
+                                                    <div class="form-check">
+                                                        <div class="radio">
+                                                            <label for="radio1" class="form-check-label ">
+                                                                <input type="radio" id="radio1" name="radios" value="option1" class="form-check-input">Option 1
+                                                            </label>
+                                                        </div>
+                                                        <div class="radio">
+                                                            <label for="radio2" class="form-check-label ">
+                                                                <input type="radio" id="radio2" name="radios" value="option2" class="form-check-input">Option 2
+                                                            </label>
+                                                        </div>
+                                                        <div class="radio">
+                                                            <label for="radio3" class="form-check-label ">
+                                                                <input type="radio" id="radio3" name="radios" value="option3" class="form-check-input">Option 3
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row form-group">
+                                                <div class="col col-md-3">
+                                                    <label class=" form-control-label">Inline Radios</label>
+                                                </div>
+                                                <div class="col col-md-9">
+                                                    <div class="form-check-inline form-check">
+                                                        <label for="inline-radio1" class="form-check-label ">
+                                                            <input type="radio" id="inline-radio1" name="inline-radios" value="option1" class="form-check-input">One
+                                                        </label>
+                                                        <label for="inline-radio2" class="form-check-label ">
+                                                            <input type="radio" id="inline-radio2" name="inline-radios" value="option2" class="form-check-input">Two
+                                                        </label>
+                                                        <label for="inline-radio3" class="form-check-label ">
+                                                            <input type="radio" id="inline-radio3" name="inline-radios" value="option3" class="form-check-input">Three
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row form-group">
+                                                <div class="col col-md-3">
+                                                    <label class=" form-control-label">Checkboxes</label>
+                                                </div>
+                                                <div class="col col-md-9">
+                                                    <div class="form-check">
+                                                        <div class="checkbox">
+                                                            <label for="checkbox1" class="form-check-label ">
+                                                                <input type="checkbox" id="checkbox1" name="checkbox1" value="option1" class="form-check-input">Option 1
+                                                            </label>
+                                                        </div>
+                                                        <div class="checkbox">
+                                                            <label for="checkbox2" class="form-check-label ">
+                                                                <input type="checkbox" id="checkbox2" name="checkbox2" value="option2" class="form-check-input"> Option 2
+                                                            </label>
+                                                        </div>
+                                                        <div class="checkbox">
+                                                            <label for="checkbox3" class="form-check-label ">
+                                                                <input type="checkbox" id="checkbox3" name="checkbox3" value="option3" class="form-check-input"> Option 3
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row form-group">
+                                                <div class="col col-md-3">
+                                                    <label class=" form-control-label">Inline Checkboxes</label>
+                                                </div>
+                                                <div class="col col-md-9">
+                                                    <div class="form-check-inline form-check">
+                                                        <label for="inline-checkbox1" class="form-check-label ">
+                                                            <input type="checkbox" id="inline-checkbox1" name="inline-checkbox1" value="option1" class="form-check-input">One
+                                                        </label>
+                                                        <label for="inline-checkbox2" class="form-check-label ">
+                                                            <input type="checkbox" id="inline-checkbox2" name="inline-checkbox2" value="option2" class="form-check-input">Two
+                                                        </label>
+                                                        <label for="inline-checkbox3" class="form-check-label ">
+                                                            <input type="checkbox" id="inline-checkbox3" name="inline-checkbox3" value="option3" class="form-check-input">Three
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row form-group">
+                                                <div class="col col-md-3">
+                                                    <label for="file-input" class=" form-control-label">File input</label>
+                                                </div>
+                                                <div class="col-12 col-md-9">
+                                                    <input type="file" id="file-input" name="file-input" class="form-control-file">
+                                                </div>
+                                            </div>
+                                            <div class="row form-group">
+                                                <div class="col col-md-3">
+                                                    <label for="file-multiple-input" class=" form-control-label">Multiple File input</label>
+                                                </div>
+                                                <div class="col-12 col-md-9">
+                                                    <input type="file" id="file-multiple-input" name="file-multiple-input"  class="form-control-file">
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="card-footer">
+                                        <button type="submit" class="btn btn-primary btn-sm">
+                                            <i class="fa fa-dot-circle-o"></i> Submit
+                                        </button>
+                                        <button type="reset" class="btn btn-danger btn-sm">
+                                            <i class="fa fa-ban"></i> Reset
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header">
+                                        <strong>Inline</strong> Form
+                                    </div>
+                                    <div class="card-body card-block">
+                                        <form action="" method="post" class="form-inline">
+                                            <div class="form-group">
+                                                <label for="exampleInputName2" class="pr-1  form-control-label">Name</label>
+                                                <input type="text" id="exampleInputName2" placeholder="Jane Doe"  class="form-control">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="exampleInputEmail2" class="px-1  form-control-label">Email</label>
+                                                <input type="email" id="exampleInputEmail2" placeholder="jane.doe@example.com" class="form-control">
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="card-footer">
+                                        <button type="submit" class="btn btn-primary btn-sm">
+                                            <i class="fa fa-dot-circle-o"></i> Submit
+                                        </button>
+                                        <button type="reset" class="btn btn-danger btn-sm">
+                                            <i class="fa fa-ban"></i> Reset
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <strong>Horizontal</strong> Form
+                                    </div>
+                                    <div class="card-body card-block">
+                                        <form action="" method="post" class="form-horizontal">
+                                            <div class="row form-group">
+                                                <div class="col col-md-3">
+                                                    <label for="hf-email" class=" form-control-label">Email</label>
+                                                </div>
+                                                <div class="col-12 col-md-9">
+                                                    <input type="email" id="hf-email" name="hf-email" placeholder="Enter Email..." class="form-control">
+                                                    <span class="help-block">Please enter your email</span>
+                                                </div>
+                                            </div>
+                                            <div class="row form-group">
+                                                <div class="col col-md-3">
+                                                    <label for="hf-password" class=" form-control-label">Password</label>
+                                                </div>
+                                                <div class="col-12 col-md-9">
+                                                    <input type="password" id="hf-password" name="hf-password" placeholder="Enter Password..." class="form-control">
+                                                    <span class="help-block">Please enter your password</span>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="card-footer">
+                                        <button type="submit" class="btn btn-primary btn-sm">
+                                            <i class="fa fa-dot-circle-o"></i> Submit
+                                        </button>
+                                        <button type="reset" class="btn btn-danger btn-sm">
+                                            <i class="fa fa-ban"></i> Reset
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header">
+                                        <strong>Normal</strong> Form
+                                    </div>
+                                    <div class="card-body card-block">
+                                        <form action="" method="post" class="">
+                                            <div class="form-group">
+                                                <label for="nf-email" class=" form-control-label">Email</label>
+                                                <input type="email" id="nf-email" name="nf-email" placeholder="Enter Email.." class="form-control">
+                                                <span class="help-block">Please enter your email</span>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="nf-password" class=" form-control-label">Password</label>
+                                                <input type="password" id="nf-password" name="nf-password" placeholder="Enter Password.." class="form-control">
+                                                <span class="help-block">Please enter your password</span>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="card-footer">
+                                        <button type="submit" class="btn btn-primary btn-sm">
+                                            <i class="fa fa-dot-circle-o"></i> Submit
+                                        </button>
+                                        <button type="reset" class="btn btn-danger btn-sm">
+                                            <i class="fa fa-ban"></i> Reset
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header">
+                                        Input
+                                        <strong>Grid</strong>
+                                    </div>
+                                    <div class="card-body card-block">
+                                        <form action="" method="post" class="form-horizontal">
+                                            <div class="row form-group">
+                                                <div class="col col-sm-3">
+                                                    <input type="text" placeholder=".col-sm-3" class="form-control">
+                                                </div>
+                                            </div>
+                                            <div class="row form-group">
+                                                <div class="col col-sm-4">
+                                                    <input type="text" placeholder=".col-sm-4" class="form-control">
+                                                </div>
+                                            </div>
+                                            <div class="row form-group">
+                                                <div class="col col-sm-5">
+                                                    <input type="text" placeholder=".col-sm-5" class="form-control">
+                                                </div>
+                                            </div>
+                                            <div class="row form-group">
+                                                <div class="col col-sm-6">
+                                                    <input type="text" placeholder=".col-sm-6" class="form-control">
+                                                </div>
+                                            </div>
+                                            <div class="row form-group">
+                                                <div class="col col-sm-7">
+                                                    <input type="text" placeholder=".col-sm-7" class="form-control">
+                                                </div>
+                                            </div>
+                                            <div class="row form-group">
+                                                <div class="col col-sm-8">
+                                                    <input type="text" placeholder=".col-sm-8" class="form-control">
+                                                </div>
+                                            </div>
+                                            <div class="row form-group">
+                                                <div class="col col-sm-9">
+                                                    <input type="text" placeholder=".col-sm-9" class="form-control">
+                                                </div>
+                                            </div>
+                                            <div class="row form-group">
+                                                <div class="col col-sm-10">
+                                                    <input type="text" placeholder=".col-sm-10" class="form-control">
+                                                </div>
+                                            </div>
+                                            <div class="row form-group">
+                                                <div class="col col-sm-11">
+                                                    <input type="text" placeholder=".col-sm-11" class="form-control">
+                                                </div>
+                                            </div>
+                                            <div class="row form-group">
+                                                <div class="col col-sm-12">
+                                                    <input type="text" placeholder=".col-sm-12" class="form-control">
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="card-footer">
+                                        <button type="submit" class="btn btn-primary btn-sm">
+                                            <i class="fa fa-user"></i> Login
+                                        </button>
+                                        <button type="reset" class="btn btn-danger btn-sm">
+                                            <i class="fa fa-ban"></i> Reset
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header">
+                                        Input
+                                        <strong>Sizes</strong>
+                                    </div>
+                                    <div class="card-body card-block">
+                                        <form action="" method="post" class="form-horizontal">
+                                            <div class="row form-group">
+                                                <div class="col col-sm-5">
+                                                    <label for="input-small" class=" form-control-label">Small Input</label>
+                                                </div>
+                                                <div class="col col-sm-6">
+                                                    <input type="text" id="input-small" name="input-small" placeholder=".form-control-sm" class="input-sm form-control-sm form-control">
+                                                </div>
+                                            </div>
+                                            <div class="row form-group">
+                                                <div class="col col-sm-5">
+                                                    <label for="input-normal" class=" form-control-label">Normal Input</label>
+                                                </div>
+                                                <div class="col col-sm-6">
+                                                    <input type="text" id="input-normal" name="input-normal" placeholder="Normal" class="form-control">
+                                                </div>
+                                            </div>
+                                            <div class="row form-group">
+                                                <div class="col col-sm-5">
+                                                    <label for="input-large" class=" form-control-label">Large Input</label>
+                                                </div>
+                                                <div class="col col-sm-6">
+                                                    <input type="text" id="input-large" name="input-large" placeholder=".form-control-lg" class="input-lg form-control-lg form-control">
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="card-footer">
+                                        <button type="submit" class="btn btn-primary btn-sm">
+                                            <i class="fa fa-dot-circle-o"></i> Submit
+                                        </button>
+                                        <button type="reset" class="btn btn-danger btn-sm">
+                                            <i class="fa fa-ban"></i> Reset
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <strong>Validation states</strong> Form
+                                    </div>
+                                    <div class="card-body card-block">
+                                        <div class="has-success form-group">
+                                            <label for="inputIsValid" class=" form-control-label">Input is valid</label>
+                                            <input type="text" id="inputIsValid" class="is-valid form-control-success form-control">
+                                        </div>
+                                        <div class="has-warning form-group">
+                                            <label for="inputIsInvalid" class=" form-control-label">Input is invalid</label>
+                                            <input type="text" id="inputIsInvalid" class="is-invalid form-control">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <strong>Validation states</strong> with optional icons
+                                        <em>(deprecated)</em>
+                                    </div>
+                                    <div class="card-body card-block">
+                                        <div class="has-success form-group">
+                                            <label for="inputSuccess2i" class=" form-control-label">Input with success</label>
+                                            <input type="text" id="inputSuccess2i" class="form-control-success form-control">
+                                        </div>
+                                        <div class="has-warning form-group">
+                                            <label for="inputWarning2i" class=" form-control-label">Input with warning</label>
+                                            <input type="text" id="inputWarning2i" class="form-control-warning form-control">
+                                        </div>
+                                        <div class="has-danger has-feedback form-group">
+                                            <label for="inputError2i" class=" form-control-label">Input with error</label>
+                                            <input type="text" id="inputError2i" class="form-control-danger form-control">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <strong>Icon/Text</strong> Groups
+                                    </div>
+                                    <div class="card-body card-block">
+                                        <form action="" method="post" class="form-horizontal">
+                                            <div class="row form-group">
+                                                <div class="col col-md-12">
+                                                    <div class="input-group">
+                                                        <div class="input-group-addon">
+                                                            <i class="fa fa-user"></i>
+                                                        </div>
+                                                        <input type="text" id="input1-group1" name="input1-group1" placeholder="Username" class="form-control">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row form-group">
+                                                <div class="col col-md-12">
+                                                    <div class="input-group">
+                                                        <input type="email" id="input2-group1" name="input2-group1" placeholder="Email" class="form-control">
+                                                        <div class="input-group-addon">
+                                                            <i class="far fa-envelope"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row form-group">
+                                                <div class="col col-md-12">
+                                                    <div class="input-group">
+                                                        <div class="input-group-addon">
+                                                            <i class="fa fa-euro"></i>
+                                                        </div>
+                                                        <input type="text" id="input3-group1" name="input3-group1" placeholder=".." class="form-control">
+                                                        <div class="input-group-addon">.00</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="card-footer">
+                                        <button type="submit" class="btn btn-success btn-sm">
+                                            <i class="fa fa-dot-circle-o"></i> Submit
+                                        </button>
+                                        <button type="reset" class="btn btn-danger btn-sm">
+                                            <i class="fa fa-ban"></i> Reset
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <strong>Buttons</strong> Groups
+                                    </div>
+                                    <div class="card-body card-block">
+                                        <form action="" method="post" class="form-horizontal">
+                                            <div class="row form-group">
+                                                <div class="col col-md-12">
+                                                    <div class="input-group">
+                                                        <div class="input-group-btn">
+                                                            <button class="btn btn-primary">
+                                                                <i class="fa fa-search"></i> Search
+                                                            </button>
+                                                        </div>
+                                                        <input type="text" id="input1-group2" name="input1-group2" placeholder="Username" class="form-control">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row form-group">
+                                                <div class="col col-md-12">
+                                                    <div class="input-group">
+                                                        <input type="email" id="input2-group2" name="input2-group2" placeholder="Email" class="form-control">
+                                                        <div class="input-group-btn">
+                                                            <button class="btn btn-primary">Submit</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row form-group">
+                                                <div class="col col-md-12">
+                                                    <div class="input-group">
+                                                        <div class="input-group-btn">
+                                                            <button class="btn btn-primary">
+                                                                <i class="fa fa-facebook"></i>
+                                                            </button>
+                                                        </div>
+                                                        <input type="text" id="input3-group2" name="input3-group2" placeholder="Search" class="form-control">
+                                                        <div class="input-group-btn">
+                                                            <button class="btn btn-primary">
+                                                                <i class="fa fa-twitter"></i>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="card-footer">
+                                        <button type="submit" class="btn btn-success btn-sm">
+                                            <i class="fa fa-dot-circle-o"></i> Submit
+                                        </button>
+                                        <button type="reset" class="btn btn-danger btn-sm">
+                                            <i class="fa fa-ban"></i> Reset
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <strong>Dropdowns</strong> Groups
+                                    </div>
+                                    <div class="card-body card-block">
+                                        <form class="form-horizontal">
+                                            <div class="row form-group">
+                                                <div class="col col-md-12">
+                                                    <div class="input-group">
+                                                        <div class="input-group-btn">
+                                                            <div class="btn-group">
+                                                                <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle btn btn-primary">Dropdown</button>
+                                                                <div tabindex="-1" aria-hidden="true" role="menu" class="dropdown-menu">
+                                                                    <button type="button" tabindex="0" class="dropdown-item">Action</button>
+                                                                    <button type="button" tabindex="0" class="dropdown-item">Another Action</button>
+                                                                    <button type="button" tabindex="0" class="dropdown-item">Something else here</button>
+                                                                    <div tabindex="-1" class="dropdown-divider"></div>
+                                                                    <button type="button" tabindex="0" class="dropdown-item">Separated link</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <input type="text" id="input1-group3" name="input1-group3" placeholder="Username" class="form-control">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row form-group">
+                                                <div class="col col-md-12">
+                                                    <div class="input-group">
+                                                        <input type="email" id="input2-group3" name="input2-group3" placeholder="Email" class="form-control">
+                                                        <div class="input-group-btn">
+                                                            <div class="btn-group">
+                                                                <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle btn btn-primary">Dropdown</button>
+                                                                <div tabindex="-1" aria-hidden="true" role="menu" class="dropdown-menu">
+                                                                    <button type="button" tabindex="0" class="dropdown-item">Action</button>
+                                                                    <button type="button" tabindex="0" class="dropdown-item">Another Action</button>
+                                                                    <button type="button" tabindex="0" class="dropdown-item">Something else here</button>
+                                                                    <div tabindex="-1" class="dropdown-divider"></div>
+                                                                    <button type="button" tabindex="0" class="dropdown-item">Separated link</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row form-group">
+                                                <div class="col col-md-12">
+                                                    <div class="input-group">
+                                                        <div class="input-group-btn">
+                                                            <div class="btn-group">
+                                                                <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle btn btn-primary">Action</button>
+                                                                <div tabindex="-1" aria-hidden="true" role="menu" class="dropdown-menu">
+                                                                    <button type="button" tabindex="0" class="dropdown-item">Action</button>
+                                                                    <button type="button" tabindex="0" class="dropdown-item">Another Action</button>
+                                                                    <button type="button" tabindex="0" class="dropdown-item">Something else here</button>
+                                                                    <div tabindex="-1" class="dropdown-divider"></div>
+                                                                    <button type="button" tabindex="0" class="dropdown-item">Separated link</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <input type="text" id="input3-group3" name="input3-group3" placeholder=".." class="form-control">
+                                                        <div class="input-group-btn">
+                                                            <div class="btn-group">
+                                                                <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle btn btn-primary">Dropdown</button>
+                                                                <div tabindex="-1" aria-hidden="true" role="menu" class="dropdown-menu">
+                                                                    <button type="button" tabindex="0" class="dropdown-item">Action</button>
+                                                                    <button type="button" tabindex="0" class="dropdown-item">Another Action</button>
+                                                                    <button type="button" tabindex="0" class="dropdown-item">Something else here</button>
+                                                                    <div tabindex="-1" class="dropdown-divider"></div>
+                                                                    <button type="button" tabindex="0" class="dropdown-item">Separated link</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="card-footer">
+                                        <button type="submit" class="btn btn-success btn-sm">
+                                            <i class="fa fa-dot-circle-o"></i> Submit
+                                        </button>
+                                        <button type="reset" class="btn btn-danger btn-sm">
+                                            <i class="fa fa-ban"></i> Reset
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="card">
+                                    <div class="card-header">
+                                        Use the grid for big devices!
+                                        <small>
+                                            <code>.col-lg-*</code>
+                                            <code>.col-md-*</code>
+                                            <code>.col-sm-*</code>
+                                        </small>
+                                    </div>
+                                    <div class="card-body card-block">
+                                        <form action="" method="post" class="form-horizontal">
+                                            <div class="row form-group">
+                                                <div class="col col-md-8">
+                                                    <input type="text" placeholder=".col-md-8" class="form-control">
+                                                </div>
+                                                <div class="col col-md-4">
+                                                    <input type="text" placeholder=".col-md-4" class="form-control">
+                                                </div>
+                                            </div>
+                                            <div class="row form-group">
+                                                <div class="col col-md-7">
+                                                    <input type="text" placeholder=".col-md-7" class="form-control">
+                                                </div>
+                                                <div class="col col-md-5">
+                                                    <input type="text" placeholder=".col-md-5" class="form-control">
+                                                </div>
+                                            </div>
+                                            <div class="row form-group">
+                                                <div class="col col-md-6">
+                                                    <input type="text" placeholder=".col-md-6" class="form-control">
+                                                </div>
+                                                <div class="col col-md-6">
+                                                    <input type="text" placeholder=".col-md-6" class="form-control">
+                                                </div>
+                                            </div>
+                                            <div class="row form-group">
+                                                <div class="col col-md-5">
+                                                    <input type="text" placeholder=".col-md-5" class="form-control">
+                                                </div>
+                                                <div class="col col-md-7">
+                                                    <input type="text" placeholder=".col-md-7" class="form-control">
+                                                </div>
+                                            </div>
+                                            <div class="row form-group">
+                                                <div class="col col-md-4">
+                                                    <input type="text" placeholder=".col-md-4" class="form-control">
+                                                </div>
+                                                <div class="col col-md-8">
+                                                    <input type="text" placeholder=".col-md-8" class="form-control">
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="card-footer">
+                                        <button type="submit" class="btn btn-primary btn-sm">Action</button>
+                                        <button class="btn btn-danger btn-sm">Action</button>
+                                        <button class="btn btn-warning btn-sm">Action</button>
+                                        <button class="btn btn-info btn-sm">Action</button>
+                                        <button class="btn btn-success btn-sm">Action</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="card">
+                                    <div class="card-header">
+                                        Input Grid for small devices!
+                                        <small>
+                                            <code>.col-*</code>
+                                        </small>
+                                    </div>
+                                    <div class="card-body card-block">
+                                        <form action="" method="post" class="form-horizontal">
+                                            <div class="row form-group">
+                                                <div class="col-4">
+                                                    <input type="text" placeholder=".col-4" class="form-control">
+                                                </div>
+                                                <div class="col-8">
+                                                    <input type="text" placeholder=".col-8" class="form-control">
+                                                </div>
+                                            </div>
+                                            <div class="row form-group">
+                                                <div class="col-5">
+                                                    <input type="text" placeholder=".col-5" class="form-control">
+                                                </div>
+                                                <div class="col-7">
+                                                    <input type="text" placeholder=".col-7" class="form-control">
+                                                </div>
+                                            </div>
+                                            <div class="row form-group">
+                                                <div class="col-6">
+                                                    <input type="text" placeholder=".col-6" class="form-control">
+                                                </div>
+                                                <div class="col-6">
+                                                    <input type="text" placeholder=".col-6" class="form-control">
+                                                </div>
+                                            </div>
+                                            <div class="row form-group">
+                                                <div class="col-7">
+                                                    <input type="text" placeholder=".col-5" class="form-control">
+                                                </div>
+                                                <div class="col-5">
+                                                    <input type="text" placeholder=".col-5" class="form-control">
+                                                </div>
+                                            </div>
+                                            <div class="row form-group">
+                                                <div class="col-8">
+                                                    <input type="text" placeholder=".col-8" class="form-control">
+                                                </div>
+                                                <div class="col-4">
+                                                    <input type="text" placeholder=".col-4" class="form-control">
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="card-footer">
+                                        <button type="submit" class="btn btn-primary btn-sm">Action</button>
+                                        <button class="btn btn-danger btn-sm">Action</button>
+                                        <button class="btn btn-warning btn-sm">Action</button>
+                                        <button class="btn btn-info btn-sm">Action</button>
+                                        <button class="btn btn-success btn-sm">Action</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="card">
+                                    <div class="card-header">Example Form</div>
+                                    <div class="card-body card-block">
+                                        <form action="" method="post" class="">
+                                            <div class="form-group">
+                                                <div class="input-group">
+                                                    <div class="input-group-addon">Username</div>
+                                                    <input type="text" id="username3" name="username3" class="form-control">
+                                                    <div class="input-group-addon">
+                                                        <i class="fa fa-user"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="input-group">
+                                                    <div class="input-group-addon">Email</div>
+                                                    <input type="email" id="email3" name="email3" class="form-control">
+                                                    <div class="input-group-addon">
+                                                        <i class="fa fa-envelope"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="input-group">
+                                                    <div class="input-group-addon">Password</div>
+                                                    <input type="password" id="password3" name="password3" class="form-control">
+                                                    <div class="input-group-addon">
+                                                        <i class="fa fa-asterisk"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-actions form-group">
+                                                <button type="submit" class="btn btn-primary btn-sm">Submit</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="card">
+                                    <div class="card-header">Example Form</div>
+                                    <div class="card-body card-block">
+                                        <form action="" method="post" class="">
+                                            <div class="form-group">
+                                                <div class="input-group">
+                                                    <input type="text" id="username2" name="username2" placeholder="Username" class="form-control">
+                                                    <div class="input-group-addon">
+                                                        <i class="fa fa-user"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="input-group">
+                                                    <input type="email" id="email2" name="email2" placeholder="Email" class="form-control">
+                                                    <div class="input-group-addon">
+                                                        <i class="fa fa-envelope"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="input-group">
+                                                    <input type="password" id="password2" name="password2" placeholder="Password" class="form-control">
+                                                    <div class="input-group-addon">
+                                                        <i class="fa fa-asterisk"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-actions form-group">
+                                                <button type="submit" class="btn btn-secondary btn-sm">Submit</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="card">
+                                    <div class="card-header">Example Form</div>
+                                    <div class="card-body card-block">
+                                        <form action="" method="post" class="">
+                                            <div class="form-group">
+                                                <div class="input-group">
+                                                    <div class="input-group-addon">
+                                                        <i class="fa fa-user"></i>
+                                                    </div>
+                                                    <input type="text" id="username" name="username" placeholder="Username" class="form-control">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="input-group">
+                                                    <div class="input-group-addon">
+                                                        <i class="fa fa-envelope"></i>
+                                                    </div>
+                                                    <input type="email" id="email" name="email" placeholder="Email" class="form-control">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="input-group">
+                                                    <div class="input-group-addon">
+                                                        <i class="fa fa-asterisk"></i>
+                                                    </div>
+                                                    <input type="password" id="password" name="password" placeholder="Password" class="form-control">
+                                                </div>
+                                            </div>
+                                            <div class="form-actions form-group">
+                                                <button type="submit" class="btn btn-success btn-sm">Submit</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-
-      </div>
-
-    </header>
-
-    <!-- - - - - - - - - - - - - end Header - - - - - - - - - - - - - - - -->
-    
-    <!-- - - - - - - - - - - - - - Media holder - - - - - - - - - - - - - - - - -->
-
-    <div class="media-holder" data-bg="images/1920x806_bg1.jpg">
-      
-      <div class="container">
-        
-        <div class="inner">
-          
-          <h1>Buy and Sell</h1>
-          <h2>Digital Currency Securely!</h2>
-          <p>Most popular way to buy and sell bitcoin, ethereum, and other crypto currencies.</p>
-          <a href="#" class="btn btn-style-4 btn-big">Get Started!</a>
-
-        </div>
-
-      </div>
-
-      <div class="str crypto-section">
-          
-        <!-- Owl item -->
-        <div class="cr-item">
-          
-          <div class="cr-currency">BTC/USD<span>-2.83%</span></div>
-          <div class="cr-price"><span>15,423.52</span> USD</div>
-          <div class="vol">Volume: <span>24,794</span> BTC</div>
-
-        </div>
-
-        <!-- Owl item -->
-        <div class="cr-item">
-          
-          <div class="cr-currency">BCH/USD<span>-4.99%</span></div>
-          <div class="cr-price"><span>2,694.86</span> USD</div>
-          <div class="vol">Volume: <span>17,755</span> BCH</div>
-
-        </div>
-
-        <!-- Owl item -->
-        <div class="cr-item">
-          
-          <div class="cr-currency">ETH/USD<span class="plus">+0.89%</span></div>
-          <div class="cr-price"><span>642.38</span> USD</div>
-          <div class="vol">Volume: <span>12,873</span> ETH</div>
-
-        </div>
-
-        <!-- Owl item -->
-        <div class="cr-item">
-          
-          <div class="cr-currency">LTC/USD<span>-5.59%</span></div>
-          <div class="cr-price"><span>262.19</span> USD</div>
-          <div class="vol">Volume: <span>491,842</span> LTC</div>
-
-        </div>
-
-        <!-- Owl item -->
-        <div class="cr-item">
-          
-          <div class="cr-currency">ETH/BTC<span class="plus">+2.45%</span></div>
-          <div class="cr-price"><span>0.52</span> BTC</div>
-          <div class="vol">Volume: <span>67,623</span> ETH</div>
-
-        </div>
-
-        <!-- Owl item -->
-        <div class="cr-item">
-          
-          <div class="cr-currency">LTC/BTC<span>-2.30%</span></div>
-          <div class="cr-price"><span>0.02</span> BTC</div>
-          <div class="vol">Volume: <span>24,794</span> LTC</div>
-
-        </div>
-
-        <!-- Owl item -->
-        <div class="cr-item">
-          
-          <div class="cr-currency">BTC/GBP<span>-2.83%</span></div>
-          <div class="cr-price"><span>11,560.34</span> GBP</div>
-          <div class="vol">Volume: <span>773</span> BTC</div>
-
-        </div>
-
-        <!-- Owl item -->
-        <div class="cr-item">
-          
-          <div class="cr-currency">BTC/EUR<span>-0.77%</span></div>
-          <div class="cr-price"><span>13,479.44</span> EUR</div>
-          <div class="vol">Volume: <span>4,111</span> BTC</div>
-
-        </div>
-
-        <!-- Owl item -->
-        <div class="cr-item">
-          
-          <div class="cr-currency">BTC/USD<span>-2.83%</span></div>
-          <div class="cr-price"><span>15,423.52</span> USD</div>
-          <div class="vol">Volume: <span>24,794</span> BTC</div>
-
-        </div>
-
-        <!-- Owl item -->
-        <div class="cr-item">
-          
-          <div class="cr-currency">BCH/USD<span>-4.99%</span></div>
-          <div class="cr-price"><span>2,694.86</span> USD</div>
-          <div class="vol">Volume: <span>17,755</span> BCH</div>
-
-        </div>
-
-        <!-- Owl item -->
-        <div class="cr-item">
-          
-          <div class="cr-currency">ETH/USD<span class="plus">+0.89%</span></div>
-          <div class="cr-price"><span>642.38</span> USD</div>
-          <div class="vol">Volume: <span>12,873</span> ETH</div>
-
-        </div>
-
-        <!-- Owl item -->
-        <div class="cr-item">
-          
-          <div class="cr-currency">LTC/USD<span>-5.59%</span></div>
-          <div class="cr-price"><span>262.19</span> USD</div>
-          <div class="vol">Volume: <span>491,842</span> LTC</div>
-
-        </div>
-
-        <!-- Owl item -->
-        <div class="cr-item">
-          
-          <div class="cr-currency">ETH/BTC<span class="plus">+2.45%</span></div>
-          <div class="cr-price"><span>0.52</span> BTC</div>
-          <div class="vol">Volume: <span>67,623</span> ETH</div>
-
-        </div>
-
-        <!-- Owl item -->
-        <div class="cr-item">
-          
-          <div class="cr-currency">LTC/BTC<span>-2.30%</span></div>
-          <div class="cr-price"><span>0.02</span> BTC</div>
-          <div class="vol">Volume: <span>24,794</span> LTC</div>
-
-        </div>
-
-        <!-- Owl item -->
-        <div class="cr-item">
-          
-          <div class="cr-currency">BTC/GBP<span>-2.83%</span></div>
-          <div class="cr-price"><span>11,560.34</span> GBP</div>
-          <div class="vol">Volume: <span>773</span> BTC</div>
-
-        </div>
-
-        <!-- Owl item -->
-        <div class="cr-item">
-          
-          <div class="cr-currency">BTC/EUR<span>-0.77%</span></div>
-          <div class="cr-price"><span>13,479.44</span> EUR</div>
-          <div class="vol">Volume: <span>4,111</span> BTC</div>
-
-        </div>
-
-      </div>
 
     </div>
 
-    <!-- - - - - - - - - - - - - end Media holder - - - - - - - - - - - - - - - -->
+    <!-- Jquery JS-->
+    <script data-cfasync="false" src="${js}/email-decode.min.js"></script><script src="${js}/adminLTE/jquery-3.2.1.min.js"></script>
+    <!-- Bootstrap JS-->
+    <script src="${js}/popper.min.js"></script>
+    <script src="${js}/bootstrap.min.js"></script>
+    <!-- Vendor JS       -->
+    <script src="${js}/slick.min.js">
+    </script>
+    <script src="${js}/wow.min.js"></script>
+    <script src="${js}/animsition.min.js"></script>
+    <script src="${js}/bootstrap-progressbar.min.js">1
+    </script>
+    <script src="${js}/jquery.waypoints.min.js"></script>
+    <script src="${js}/jquery.counterup.min.js">
+    </script>
+    <script src="${js}/circle-progress.min.js"></script>
+    <script src="${js}/perfect-scrollbar.js"></script>
+    <script src="${js}/Chart.bundle.min.js"></script>
+    <script src="${js}/select2.min.js">
+    </script>
+
+    <!-- Main JS-->
+    <script src="${js}/main.js"></script>
 
-    <!-- - - - - - - - - - - - - - Content - - - - - - - - - - - - - - - - -->
-
-    <div id="content">
-
-      <div class="page-section-bg">
-        
-        <div class="container">
-          
-          <div class="content-element5">
-            
-            <div class="align-center">
-              
-              <h2 class="section-title">Benefits of Working With Us</h2>
-              <p class="text-size-medium">Donec in velit vel ipsum auctor pulvinar. Vestibulum iaculis lacinia est. <br>
-              Proin dictum elementum velit. Fusce euismod consequat ante.</p>
-
-            </div>
-
-          </div>
-
-          <div class="icons-box style-1">
-
-            <div class="row">
-              
-              <div class="col-lg-3 col-md-6 col-sm-12">
-              
-                <!-- - - - - - - - - - - - - - Icon Box Item - - - - - - - - - - - - - - - - -->        
-                <div class="icons-wrap">
-
-                  <div class="icons-item">
-                    <div class="item-box">
-                      <i class="licon-vault"></i>
-                      <h5 class="icons-box-title"><a href="#">Trusted and Secure</a></h5>
-                      <p>Vestibulum sed ante. Donec sagittis euismod purus. Sed ut perspiciatis unde omnis iste natus error sit.</p>
-                    </div>
-                  </div>
-
-                </div>
-
-              </div>
-              <div class="col-lg-3 col-md-6 col-sm-12">
-              
-                <!-- - - - - - - - - - - - - - Icon Box Item - - - - - - - - - - - - - - - - -->        
-                <div class="icons-wrap">
-
-                  <div class="icons-item">
-                    <div class="item-box">
-                      <i class="licon-document"></i>
-                      <h5 class="icons-box-title"><a href="#">We are Insured</a></h5>
-                      <p>Accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi.</p>
-                    </div>
-                  </div>
-
-                </div>
-
-              </div>
-              <div class="col-lg-3 col-md-6 col-sm-12">
-              
-                <!-- - - - - - - - - - - - - - Icon Box Item - - - - - - - - - - - - - - - - -->        
-                <div class="icons-wrap">
-
-                  <div class="icons-item">
-                    <div class="item-box">
-                      <i class="licon-shield-check"></i>
-                      <h5 class="icons-box-title"><a href="#">Backed by Top Investors</a></h5>
-                      <p>Aliquam erat volutpat. Duis ac turpis. Donec sit amet eros. Lorem ipsum dolor sit amet, consectetuer adipiscing.</p>
-                    </div>
-                  </div>
-
-                </div>
-
-              </div>
-              <div class="col-lg-3 col-md-6 col-sm-12">
-              
-                <!-- - - - - - - - - - - - - - Icon Box Item - - - - - - - - - - - - - - - - -->        
-                <div class="icons-wrap">
-
-                  <div class="icons-item">
-                    <div class="item-box">
-                      <i class="licon-bag-dollar"></i>
-                      <h5 class="icons-box-title"><a href="#">0% Maker Fees</a></h5>
-                      <p>Mauris fermentum dictum magna. Sed laoreet aliquam leo. Ut tellus dolor, dapibus eget, elementum vel.</p>
-                    </div>
-                  </div>
-
-                </div>
-
-              </div>
-              
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-
-      <div class="page-section">
-        
-        <div class="container">
-          
-          <div class="content-element5">
-            
-            <div class="align-center">
-              
-              <h2 class="section-title">How to Get Started</h2>
-
-            </div>
-
-          </div>
-
-          <div class="tabs tabs-section">
-            <!--tabs navigation-->                  
-            <ul class="tabs-nav align-center">
-              <li>
-                <a href="#tab-1">Learn About Bitcoin</a>
-              </li>
-              <li>
-                <a href="#tab-2">Download a Wallet</a>
-              </li>
-              <li>
-                <a href="#tab-3">Use Bitcoin</a>
-              </li>
-              <li>
-                <a href="#tab-4">Start Cloud Mining</a>
-              </li>
-              <li>
-                <a href="#tab-5">Use Bitcoin Tools</a>
-              </li>
-            </ul>
-            <!--tabs content-->                 
-            <div class="tabs-content var2">
-              <div id="tab-1">
-
-                <div class="row">
-                  <div class="col-sm-5">
-                      
-                    <img src="images/545x312_img1.jpg" alt="">
-
-                  </div>
-                  <div class="col-sm-7">
-                    
-                    <div class="tab-text-wrap">
-                      
-                      <h4 class="section-title">Simple & Secure Bitcoin Wallet</h4>
-                      <p>Aenean auctor wisi et urna. Aliquam erat volutpat. Duis ac turpis. Donec sit amet eros. Lorem ipsum dolor sit amet, consecvtetuer adipiscing elit. Mauris fermentum dictum magna. Sed laoreet aliquam leo. Ut tellus dolor, dapibus eget, elementum vel, cursus eleifend, elit.</p>
-                      <a href="#" class="btn btn-style-3">Download For Free</a>
-
-                    </div>
-
-                  </div>
-                </div>
-
-              </div>
-              <div id="tab-2">
-
-                <div class="row">
-                  <div class="col-sm-5">
-                      
-                    <img src="images/545x312_img1.jpg" alt="">
-
-                  </div>
-                  <div class="col-sm-7">
-                    
-                    <div class="tab-text-wrap">
-                      
-                      <h4 class="section-title">Simple & Secure Bitcoin Wallet</h4>
-                      <p>Aenean auctor wisi et urna. Aliquam erat volutpat. Duis ac turpis. Donec sit amet eros. Lorem ipsum dolor sit amet, consecvtetuer adipiscing elit. Mauris fermentum dictum magna. Sed laoreet aliquam leo. Ut tellus dolor, dapibus eget, elementum vel, cursus eleifend, elit.</p>
-                      <a href="#" class="btn btn-style-3">Download For Free</a>
-
-                    </div>
-
-                  </div>
-                </div>
-
-              </div>
-              <div id="tab-3">
-
-                <div class="row">
-                  <div class="col-sm-5">
-                      
-                    <img src="images/545x312_img1.jpg" alt="">
-
-                  </div>
-                  <div class="col-sm-7">
-                    
-                    <div class="tab-text-wrap">
-                      
-                      <h4 class="section-title">Simple & Secure Bitcoin Wallet</h4>
-                      <p>Aenean auctor wisi et urna. Aliquam erat volutpat. Duis ac turpis. Donec sit amet eros. Lorem ipsum dolor sit amet, consecvtetuer adipiscing elit. Mauris fermentum dictum magna. Sed laoreet aliquam leo. Ut tellus dolor, dapibus eget, elementum vel, cursus eleifend, elit.</p>
-                      <a href="#" class="btn btn-style-3">Download For Free</a>
-
-                    </div>
-
-                  </div>
-                </div>
-
-              </div>
-              <div id="tab-4">
-
-                <div class="row">
-                  <div class="col-sm-5">
-                      
-                    <img src="images/545x312_img1.jpg" alt="">
-
-                  </div>
-                  <div class="col-sm-7">
-                    
-                    <div class="tab-text-wrap">
-                      
-                      <h4 class="section-title">Simple & Secure Bitcoin Wallet</h4>
-                      <p>Aenean auctor wisi et urna. Aliquam erat volutpat. Duis ac turpis. Donec sit amet eros. Lorem ipsum dolor sit amet, consecvtetuer adipiscing elit. Mauris fermentum dictum magna. Sed laoreet aliquam leo. Ut tellus dolor, dapibus eget, elementum vel, cursus eleifend, elit.</p>
-                      <a href="#" class="btn btn-style-3">Download For Free</a>
-
-                    </div>
-
-                  </div>
-                </div>
-
-              </div>
-              <div id="tab-5">
-
-                <div class="row">
-                  <div class="col-sm-5">
-                      
-                    <img src="images/545x312_img1.jpg" alt="">
-
-                  </div>
-                  <div class="col-sm-7">
-                    
-                    <div class="tab-text-wrap">
-                      
-                      <h4 class="section-title">Simple & Secure Bitcoin Wallet</h4>
-                      <p>Aenean auctor wisi et urna. Aliquam erat volutpat. Duis ac turpis. Donec sit amet eros. Lorem ipsum dolor sit amet, consecvtetuer adipiscing elit. Mauris fermentum dictum magna. Sed laoreet aliquam leo. Ut tellus dolor, dapibus eget, elementum vel, cursus eleifend, elit.</p>
-                      <a href="#" class="btn btn-style-3">Download For Free</a>
-
-                    </div>
-
-                  </div>
-                </div>
-
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-
-      <div class="page-section-bg white-text half-bg-col">
-
-        <div class="img-col-left"><div class="col-bg" data-bg="images/960x520_bg1.jpg"></div></div>
-        <div class="img-col-right"><div class="col-bg" data-bg="images/960x520_bg2.jpg"></div></div>
-        
-        <div class="container">
-          
-          <div class="row">
-            <div class="col-md-6">
-              
-              <div class="half-col-wrap">
-                
-                <div class="content-element5">
-                  
-                  <h2 class="section-title">Currency Calculator</h2>
-                  <p>Aliquam erat volutpat. Duis ac turpis. Donec sit amet eros. <br> Lorem ipsum dolor sit amet, consecvtetuer.</p>
-
-                </div>
-
-                <!-- Calculator -->
-                <div class="calc-section style-2">
-                  
-                  <!-- Calc item -->
-                  <div class="calc-item">
-                    
-                    <div class="currency">
-                      <div class="flex-row flex-justify">
-                        <span>1</span>
-                        <span>BTC</span>
-                      </div>
-                    </div>
-                    <span>=</span>
-                    <div class="quantity">15232.58</div>
-                    <div class="custom-select price-check">
-                      <div class="select-title">USD</div>
-                      <ul id="menu-type2" class="select-list"></ul>
-                      <select class="hide">
-                        <option value="menu">USD</option>
-                        <option value="menu">EUR</option>
-                        <option value="menu">RUR</option>
-                      </select>
-                    </div>
-
-                  </div>
-
-                  <!-- Calc item -->
-                  <div class="calc-item">
-                    
-                    <div class="currency">
-                      <div class="flex-row flex-justify">
-                        <span>1</span>
-                        <span>BCH</span>
-                      </div>
-                    </div>
-                    <span>=</span>
-                    <div class="quantity">2809.63</div>
-                    <div class="custom-select price-check">
-                      <div class="select-title">USD</div>
-                      <ul id="menu-type4" class="select-list"></ul>
-                      <select class="hide">
-                        <option value="menu">USD</option>
-                        <option value="menu">EUR</option>
-                        <option value="menu">RUR</option>
-                      </select>
-                    </div>
-
-                  </div>
-
-                </div>
-
-              </div>
-
-            </div>
-            <div class="col-md-6"></div>
-          </div>
-
-        </div>
-
-      </div>
-
-      <div class="page-section-bg type2">
-        
-        <div class="container">
-          
-          <div class="counter-wrap">
-
-            <div class="row">
-              <div class="col-lg-3 col-md-6 col-sm-6">
-              
-                <div class="counter">
-                  <div class="count-item">
-                    <span class="licon-briefcase"></span>
-                    <h3 class="timer count-number" data-to="18" data-speed="1500">0</h3>
-                  </div>
-                  <p>Years of Experience</p>
-                </div>
-              
-              </div>
-              <div class="col-lg-3 col-md-6 col-sm-6">
-              
-                <div class="counter">
-                  <div class="count-item">
-                    <span class="licon-thumbs-up"></span>
-                    <h3 class="timer count-number" data-to="389" data-speed="1500">0</h3>
-                  </div>
-                  <p>Satisfied Clients</p>
-                </div>
-              
-              </div>
-              <div class="col-lg-3 col-md-6 col-sm-6">
-              
-                <div class="counter">
-                  <div class="count-item">
-                    <span class="licon-tie"></span>
-                    <h3 class="timer count-number" data-to="15" data-speed="1500">0</h3>
-                  </div>
-                  <p>Experts in Our Team</p>
-                </div>
-              
-              </div>
-              <div class="col-lg-3 col-md-6 col-sm-6">
-              
-                <div class="counter">
-                  <div class="count-item">
-                    <span class="licon-check"></span>
-                    <h3 class="timer count-number" data-to="74" data-speed="1500">0</h3>
-                  </div>
-                  <p>Completed Projects</p>
-                </div>
-              
-              </div>
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-
-      <div class="page-section-bg parallax-section white-text" data-bg="images/1920x1000_bg1.jpg">
-
-        <div class="container">
-          
-          <div class="row align-items-center">
-            <div class="col-md-4 col-sm-12">
-              
-              <h2 class="section-title">Bitcoin Charts</h2>
-              <p>Mauris fermentum dictum magna. Sed laoreet <br> aliquam leo. Ut tellus dolor, dapibus eget, elementum <br> vel, cursus eleifend, elit. Aenean auctor wisi et urna.</p>
-              <a href="#" class="btn btn-style-3">Learn More</a>
-
-            </div>
-            <div class="col-md-8 col-sm-12">
-              
-              <div class="row">
-                <div class="col-md-6 col-sm-12">
-                  
-                  <div class="content-element2">
-                    
-                    <h5 class="title fw-medium align-center">Bitcoin Price</h5>
-
-                  </div>
-
-                  <div class="ct-chart6 line-chart"></div>
-
-                  <div class="chart-info hr-type">
-                    
-                    <div class="chart-item red">Bitcoin</div>
-
-                    <div class="chart-item blue2">Bitcoin Cash</div>
-
-                  </div>
-
-                </div>
-                <div class="col-md-6 col-sm-12">
-                  
-                  <div class="content-element2">
-                    
-                    <h5 class="title fw-medium align-center">Money Supply</h5>
-
-                  </div>
-
-                  <div class="ct-chart7 line-chart"></div>
-
-                  <div class="chart-info hr-type">
-                    
-                    <div class="chart-item red">Bitcoin</div>
-
-                    <div class="chart-item blue2">Bitcoin Cash</div>
-
-                  </div>
-
-                </div>
-              </div>
-
-            </div>
-          </div>
-
-        </div>
-        
-      </div>
-
-      <div class="page-section">
-        
-        <div class="container">
-          
-          <div class="carousel-type-1">
-          
-            <div class="owl-carousel testimonial-holder with-photo" data-max-items="1" data-autoplay="true">
-          
-              <!-- Slide -->                  
-              <div class="item-carousel">
-                <!-- Carousel Item -->                  
-                <!-- - - - - - - - - - - - - - Testimonial - - - - - - - - - - - - - - - - -->
-                <div class="testimonial">
-
-                  <div class="author-box">
-
-                    <a href="#" class="avatar">
-                      <img src="images/208x208_photo1.jpg" alt="">
-                    </a>
-
-                  </div>
-                  
-                  <blockquote>
-                    <p>Aenean auctor wisi et urna. Aliquam erat volutpat. Duis ac turpis. Integer rutrum ante eu lacus. Vestibulum libero nisl, porta vel, scelerisque eget, malesuada at, neque. Vivamus eget nibh. Etiam cursus leo vel metus.</p>
-                    <div class="author">Mark Johnson</div>
-                    <a href="#" class="author-position">Real Estate Client</a>
-                  </blockquote>
-          
-                </div>
-                <!-- /Carousel Item --> 
-              </div>
-              <!-- /Slide -->
-          
-              <!-- Slide -->                  
-              <div class="item-carousel">
-                <!-- Carousel Item -->                  
-                <!-- - - - - - - - - - - - - - Testimonial - - - - - - - - - - - - - - - - -->
-                <div class="testimonial">
-
-                  <div class="author-box">
-
-                    <a href="#" class="avatar">
-                      <img src="images/208x208_photo1.jpg" alt="">
-                    </a>
-
-                  </div>
-                  
-                  <blockquote>
-                    <p>Aenean auctor wisi et urna. Aliquam erat volutpat. Duis ac turpis. Integer rutrum ante eu lacus. Vestibulum libero nisl, porta vel, scelerisque eget, malesuada at, neque. Vivamus eget nibh. Etiam cursus leo vel metus.</p>
-                    <div class="author">Mark Johnson</div>
-                    <a href="#" class="author-position">Real Estate Client</a>
-                  </blockquote>
-          
-                </div>
-                <!-- /Carousel Item --> 
-              </div>
-              <!-- /Slide -->
-
-              <!-- Slide -->                  
-              <div class="item-carousel">
-                <!-- Carousel Item -->                  
-                <!-- - - - - - - - - - - - - - Testimonial - - - - - - - - - - - - - - - - -->
-                <div class="testimonial">
-
-                  <div class="author-box">
-
-                    <a href="#" class="avatar">
-                      <img src="images/208x208_photo1.jpg" alt="">
-                    </a>
-
-                  </div>
-                  
-                  <blockquote>
-                    <p>Aenean auctor wisi et urna. Aliquam erat volutpat. Duis ac turpis. Integer rutrum ante eu lacus. Vestibulum libero nisl, porta vel, scelerisque eget, malesuada at, neque. Vivamus eget nibh. Etiam cursus leo vel metus.</p>
-                    <div class="author">Mark Johnson</div>
-                    <a href="#" class="author-position">Real Estate Client</a>
-                  </blockquote>
-          
-                </div>
-                <!-- /Carousel Item --> 
-              </div>
-              <!-- /Slide -->
-          
-            </div>
-          
-          </div>
-
-        </div>
-
-      </div>
-
-      <div class="page-section-bg type3">
-        
-        <div class="container">
-          
-          <div class="brand-holder style-2">
-            
-            <div class="row">
-              <div class="col-md-2 col-sm-4 col-6 col-no-space">
-                
-                <a href="#" class="brand-item"><img src="images/brand7.jpg" alt=""></a>
-
-              </div>
-              <div class="col-md-2 col-sm-4 col-6 col-no-space">
-                
-                <a href="#" class="brand-item"><img src="images/brand8.jpg" alt=""></a>
-
-              </div>
-              <div class="col-md-2 col-sm-4 col-6 col-no-space">
-                
-                <a href="#" class="brand-item"><img src="images/brand9.jpg" alt=""></a>
-
-              </div>
-              <div class="col-md-2 col-sm-4 col-6 col-no-space">
-                
-                <a href="#" class="brand-item"><img src="images/brand10.jpg" alt=""></a>
-
-              </div>
-              <div class="col-md-2 col-sm-4 col-6 col-no-space">
-                
-                <a href="#" class="brand-item"><img src="images/brand11.jpg" alt=""></a>
-
-              </div>
-              <div class="col-md-2 col-sm-4 col-6 col-no-space">
-                
-                <a href="#" class="brand-item"><img src="images/brand12.jpg" alt=""></a>
-
-              </div>
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-
-      <div class="page-section-bg parallax-section white-text half-bg-col with-phone-img" data-bg="images/1920x800_bg1.jpg">
-
-        <div class="img-col-left"><div class="col-bg phone" data-bg="images/460x405_phone.png"></div></div>
-        
-        <div class="container">
-          
-          <div class="row align-content-center">
-            
-            <div class="col-lg-6"></div>
-            <div class="col-lg-6">
-              
-              <h2 class="section-title">Use Our App On The Go</h2>
-              <p>Stay up to date on the price of bitcoin and other crypto currencies <br>
-              anywhere and anytime.</p>
-              <div class="store-btns">
-                
-                <a href="#"><img src="images/google_btn.png" alt=""></a>
-                <a href="#"><img src="images/app_btn.png" alt=""></a>
-
-              </div>
-
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-
-      <div class="page-section">
-        
-        <div class="container">
-          
-          <div class="content-element5">
-            
-            <h2 class="section-title align-center">CryptoCurrency News</h2>
-
-          </div>
-
-          <div class="entry-box style-2">
-            
-            <div class="content-element4">
-              <div class="row">
-                <div class="col-lg-4 col-md-12">
-                  
-                  <!-- - - - - - - - - - - - - - Entry - - - - - - - - - - - - - - - - -->
-                  <div class="entry entry-small">
-                          
-                    <!-- - - - - - - - - - - - - - Entry attachment - - - - - - - - - - - - - - - - -->
-                    <div class="thumbnail-attachment">
-                      <a href="#"><img src="images/378x260_img1.jpg" alt=""></a>
-                      <div class="entry-label">Blockchain</div>
-                    </div>
-                    
-                    <!-- - - - - - - - - - - - - - Entry body - - - - - - - - - - - - - - - - -->
-                    <div class="entry-body">
-              
-                      <h5 class="entry-title"><a href="#">$17k Breached: Bitcoin Down 15% from All-Time High</a></h5>
-                      <div class="entry-meta">
-              
-                        <time class="entry-date" datetime="2018-12-21">Dec 21, 2018, 07:00 AM</time>
-                        <span>by</span>
-                        <a href="#" class="entry-cat">Adam Smith</a>
-              
-                      </div>
-              
-                    </div>
-              
-                  </div>
-              
-                </div>
-                <div class="col-lg-4 col-md-12">
-                  
-                  <!-- - - - - - - - - - - - - - Entry - - - - - - - - - - - - - - - - -->
-                  <div class="entry entry-small">
-                          
-                    <!-- - - - - - - - - - - - - - Entry attachment - - - - - - - - - - - - - - - - -->
-                    <div class="thumbnail-attachment">
-                      <a href="#"><img src="images/378x260_img2.jpg" alt=""></a>
-                      <div class="entry-label">Mining</div>
-                    </div>
-                    
-                    <!-- - - - - - - - - - - - - - Entry body - - - - - - - - - - - - - - - - -->
-                    <div class="entry-body">
-              
-                      <h5 class="entry-title"><a href="#">Bitcoin Exchange Youbit to Declare Bankruptcy After Hack</a></h5>
-                      <div class="entry-meta">
-              
-                        <time class="entry-date" datetime="2018-12-21">Dec 21, 2018, 07:00 AM</time>
-                        <span>by</span>
-                        <a href="#" class="entry-cat">Adam Smith</a>
-              
-                      </div>
-              
-                    </div>
-              
-                  </div>
-              
-                </div>
-                <div class="col-lg-4 col-md-12">
-                  
-                  <!-- - - - - - - - - - - - - - Entry - - - - - - - - - - - - - - - - -->
-                  <div class="entry entry-small">
-                          
-                    <!-- - - - - - - - - - - - - - Entry attachment - - - - - - - - - - - - - - - - -->
-                    <div class="thumbnail-attachment">
-                      <a href="#"><img src="images/378x260_img3.jpg" alt=""></a>
-                      <div class="entry-label">News</div>
-                    </div>
-                    
-                    <!-- - - - - - - - - - - - - - Entry body - - - - - - - - - - - - - - - - -->
-                    <div class="entry-body">
-              
-                      <h5 class="entry-title"><a href="#">Investors Commit $100 Million to tZERO ICO</a></h5>
-                      <div class="entry-meta">
-              
-                        <time class="entry-date" datetime="2018-12-21">Dec 21, 2018, 07:00 AM</time>
-                        <span>by</span>
-                        <a href="#" class="entry-cat">Adam Smith</a>
-              
-                      </div>
-              
-                    </div>
-              
-                  </div>
-              
-                </div>
-              </div>
-            </div>
-
-            <div class="align-center">
-                    
-              <a href="#" class="btn">More News</a>
-
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-      
-    </div>
-
-    <!-- - - - - - - - - - - - - end Content - - - - - - - - - - - - - - - -->
-
-    <div class="call-out with-bg">
-          
-      <div class="container">
-        
-        <div class="row align-items-center">
-          
-          <div class="col-lg-5 col-md-12">
-            
-            <h3 class="call-title">Sign Up For Our Newsletter</h3>
-            <p>Subscribe now and get exclusive news, interviews and stories.</p>
-
-          </div>
-          <div class="col-lg-7 col-md-12 align-right">
-            
-            <form id="newsletter" class="newsletter style-2">
-              <div class="f-right">
-                <button type="submit" data-type="submit" class="btn btn-style-4 btn-big"><i class="licon-mailbox-full"></i>Subscribe</button>
-              </div>
-              <div class="wrapper">
-                <input type="email" name="newsletter-email" placeholder="Enter your email address">
-              </div>
-            </form>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-
-    <!-- - - - - - - - - - - - - - Footer - - - - - - - - - - - - - - - - -->
-
-    <footer id="footer" class="footer style-2">
-
-      <div class="container">
-      
-        <!-- main footer -->
-        <div class="main-footer">
-          
-          <div class="row">
-
-            <div class="col-lg-3 col-md-6 col-sm-12">
-              
-              <div class="widget">
-                
-                <div class="content-element2">
-                  
-                  <a href="index.html" class="logo"><img src="images/logo2.png" alt=""></a>
-
-                </div>
-                <p>Nemo enim ipsam voluptatem quia voluptas aut fugit, sed quia consequuntur magni dolores eos qui ratione.</p>
-                <p>Est, qui dolorem ipsum quia dolor sit amet, nsectetur, sed quia non numquam eius modi tempora incidunt ut labore. </p>
-
-              </div>
-
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-12">
-              
-              <div class="widget">
-                
-                <h6 class="widget-title">Company</h6>
-
-                <ul class="chart-list">
-                
-                  <li><a href="#">About Us</a></li>
-                  <li><a href="#">Our Experts</a></li>
-                  <li><a href="#">Services</a></li>
-                  <li><a href="#">Testimonials</a></li>
-                  <li><a href="#">Blog</a></li>
-                  <li><a href="#">Contact Us</a></li>
-
-                </ul>
-
-              </div>
-
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-12">
-              
-              <div class="widget">
-                
-                <h6 class="widget-title">Live Charts</h6>
-
-                <ul class="chart-list">
-                
-                  <li><a href="#">Bitcoin Price</a></li>
-                  <li><a href="#">Bitcoin Cash Price</a></li>
-                  <li><a href="#">Bitcoin Gold Price</a></li>
-                  <li><a href="#">Ethereum Price</a></li>
-                  <li><a href="#">Ethereum Classic Price</a></li>
-                  <li><a href="#">Litecoin Price</a></li>
-
-                </ul>
-
-              </div>
-
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-12">
-              
-              <div class="widget">
-                
-                <h6 class="widget-title">Contact Us</h6>
-
-                <div class="our-info">
-                    
-                  <div class="info-item">
-                    <i class="licon-map-marker"></i>
-                    <div class="wrapper">
-                      8901 Marmora Road, Glasgow, D04 89GR. <br>
-                      <a href="https://www.google.com/maps/dir//2032+S+Elliott+Ave,+Aurora,+MO+65605/@36.9487043,-93.7878472,12z/data=!3m1!4b1!4m8!4m7!1m0!1m5!1m1!1s0x87cf4b1a194c90e1:0xba30bfe0c0a857c!2m2!1d-93.7178072!2d36.9487249" class="link-text">Get Direction</a>
-                    </div>
-                  </div>
-                  <div class="info-item">
-                    <i class="licon-telephone"></i>
-                    <div class="wrapper">
-                      <span content="telephone=no">+1 800 559 6580</span>
-                    </div>
-                  </div>
-                  <div class="info-item">
-                    <i class="licon-at-sign"></i>
-                    <div class="wrapper">
-                      <a href="mailto:">info@companyname.com</a>
-                    </div>
-                  </div>
-                  <div class="info-item">
-                    <i class="licon-clock3"></i>
-                    <div class="wrapper">
-                      Monday - Saturday: 8am - 9pm
-                    </div>
-                  </div>
-                
-                </div>
-
-              </div>
-
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-
-      <div class="copyright">
-          
-        <div class="container">
-          
-          <div class="row">
-            <div class="col">
-              
-              <p>Copyright © 2018 Cryptex. All Rights Reserved.</p>
-
-            </div>
-            <div class="col align-right">
-              
-              <ul class="social-icons">
-
-                <li><a href="#"><i class="icon-facebook"></i></a></li>
-                <li><a href="#"><i class="icon-twitter"></i></a></li>
-                <li><a href="#"><i class="icon-rss"></i></a></li>
-                <li><a href="#"><i class="icon-hash"></i></a></li>
-
-              </ul>
-
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-
-    </footer>
-
-    <!-- - - - - - - - - - - - - end Footer - - - - - - - - - - - - - - - -->
-
-  </div>
-
-  <!-- - - - - - - - - - - - end Wrapper - - - - - - - - - - - - - - -->
-
-  <!-- JS Libs & Plugins
-  ============================================ -->
-  <script src="${js}/modernizr.js"></script>
-  <script src="${js}/jquery-2.2.4.js"></script>
-  <script src="${js}/jquery-ui.js"></script>
-  <script src="${js}/retina.js"></script>
-  <script src="${js}/chartist.js"></script>
-  <script src="${js}/liMarquee.js"></script>
-  <script src="${js}/queryloader2.js"></script>
-  <script src="${js}/owl.carousel.js"></script>
-
-  <!-- JS theme files
-  ============================================ -->
-  <script src="${js}/plugins.js"></script>
-  <script src="${js}/script.js"></script>
-
-  <script>
-    
-    /*Line chart*/
-
-    var data = {
-      labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
-      series: [
-        [0, 5000, 10000, 15000, 17000, 15000],
-        [15000, 8000, 6000, 7000, 10000, 15000]
-      ]
-    };
-
-    var options = {
-      fullWidth: true,
-      high: 20000,
-      low: 1000,
-      showArea: true,
-      axisY: {
-        labelInterpolationFnc: function (value) {
-          return '$' + value;
-        },
-        scaleMinSpace: 45
-      }
-    };
-
-    var responsiveOptions = [
-      ['screen and (max-width: 769px)', {
-        axisX: {
-          labelInterpolationFnc: function (value) {
-            return value[0];
-          }
-        }
-      }]
-    ];
-
-    new Chartist.Line('.ct-chart6', data, options, responsiveOptions);
-
-    /*Line chart*/
-
-    var data = {
-      labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
-      series: [
-        [0, 5000, 10000, 15000, 17000, 15000],
-        [15000, 8000, 6000, 7000, 10000, 15000]
-      ]
-    };
-
-    var options = {
-      fullWidth: true,
-      high: 20000,
-      low: 1000,
-      showArea: true,
-      axisY: {
-        labelInterpolationFnc: function (value) {
-          return '$' + value;
-        },
-        scaleMinSpace: 45
-      }
-    };
-
-    var responsiveOptions = [
-      ['screen and (max-width: 769px)', {
-        axisX: {
-          labelInterpolationFnc: function (value) {
-            return value[0];
-          }
-        }
-      }]
-    ];
-
-    new Chartist.Line('.ct-chart7', data, options, responsiveOptions);
-
-  </script>
-  
 </body>
+
 </html>
+<!-- end document-->

@@ -29,7 +29,7 @@ public class PageController {
 	//wallet
 	@RequestMapping(value = {"/wallet"})
 	public ModelAndView wallet() {
-		ModelAndView mv = new ModelAndView("pages"); 
+		ModelAndView mv = new ModelAndView("page2"); 
 		mv.addObject("title","Wallet");
 		mv.addObject("userClickWallet",true);
 		return mv;
